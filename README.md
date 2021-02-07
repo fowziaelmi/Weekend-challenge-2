@@ -27,14 +27,14 @@ If you have suggestions or issues, please email me at fowziiae@gmail.com
 
 ## TODO
 
-- [x]source in clients.js,server and index.html
-- [x]Add inputs to the html
+- [x] Source in clients.js,server and index.html
+- [x] Add inputs to the html
 - [x] Add input for numbers
-- [x]Add button for add, subtract, multiply and divide
-- [x]Add button for calculate
-- [x]Add button for clear
+- [x] Add button for add, subtract, multiply and divide
+- [x] Add button for calculate
+- [x] Add button for clear
 
-- [x]source in jquery
+- [x] Source in jquery
 
 ### Server Side
 
