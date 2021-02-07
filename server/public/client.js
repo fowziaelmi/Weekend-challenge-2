@@ -19,8 +19,21 @@ function onReady() {
         equationType: newEquationType,
       };
       console.log(newCalculation);
-      return newCalculation;
+
+      $.ajax({
+        data: { equation_to_add: newCalculation },
+        url: '/calculation',
+        method: 'POST',
+      })
+
+        .then(function (response) {
+          console.log('yaay');
+        })
+
+        .catch(function () {
+          alert('sorry');
+        });
     });
+    // end of data send
   });
 }
-// end of data send
