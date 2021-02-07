@@ -27,7 +27,7 @@ function onReady() {
       })
 
         .then(function (response) {
-          console.log('yaay');
+          console.log(response);
         })
 
         .catch(function () {

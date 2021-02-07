@@ -2,20 +2,20 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const PORT = 5000;
-let equationData = [];
+
 //time to do some math
 // create a function that checks what the equation type is and runs that against the two input numbers
 function calculateEquation(num1, num2, equationType) {
   if (equationType === 'additionBtn') {
-    equationData = num1 + num2;
+    answer = [+num1 + +num2];
   } else if (equationType === 'subtractBtn') {
-    equationData = num1 - num2;
+    answer = [+num1 - +num2];
   } else if (equationType === 'multiplyBtn') {
-    equationData = num1 * num2;
+    answer = [+num1 * +num2];
   } else if (equationType === 'divideBtn') {
-    equationData = num1 / num2;
+    answer = [+num1 / +num2];
   }
-  return equationData;
+  return answer;
 }
 
 app.use(express.static('server/public'));
@@ -35,9 +35,17 @@ app.post('/calculation', (req, res) => {
   console.log(equation.secondNumber);
   console.log(equation.equationType);
 
-  // Add to quotesData.
+  // Now i need to send back the equation data
+  // First i need to call the function with the values
 
-  res.sendStatus(200);
+  res.send(
+    calculateEquation(
+      equation.firstNumber,
+      equation.secondNumber,
+      equation.equationType
+    )
+  );
+  console.log(answer);
   //status is a code that says 'that worked' 'ok'
   // Respond with something
 });
