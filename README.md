@@ -6,9 +6,9 @@ This application will allow the user to do simple addition, subtraction, multipl
 
 ## Built With
 
--JavaScript
--jQuery
--HTML/CSS
+- JavaScript
+- jQuery
+- HTML/CSS
 
 ## Usage
 
