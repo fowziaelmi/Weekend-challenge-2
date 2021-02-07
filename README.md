@@ -26,3 +26,7 @@ Server Side
 Client side
 [x] Create a function that when submit button is pressed, it send the input to the server side using Ajax and post method
 [x] Test it to see if the server is getting the data
+
+Server side
+[x] Create a function that takes the data from the client side
+[x] This function will have to look at the equation type i.e if its +,-,/,or \* then run that against the two input numbers

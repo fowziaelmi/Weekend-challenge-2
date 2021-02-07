@@ -2,6 +2,21 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const PORT = 5000;
+let equationData = [];
+//time to do some math
+// create a function that checks what the equation type is and runs that against the two input numbers
+function calculateEquation(num1, num2, equationType) {
+  if (equationType === 'additionBtn') {
+    equationData = num1 + num2;
+  } else if (equationType === 'subtractBtn') {
+    equationData = num1 - num2;
+  } else if (equationType === 'multiplyBtn') {
+    equationData = num1 * num2;
+  } else if (equationType === 'divideBtn') {
+    equationData = num1 / num2;
+  }
+  return equationData;
+}
 
 app.use(express.static('server/public'));
 app.use(express.json());
