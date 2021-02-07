@@ -5,18 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="jquery.min.js"></script>
     <script src="client.js"></script>
+    <link rel="stylesheet" href="style.css"> </link>
     <title>Calculator</title>
   </head>
   <h1>Calculator</h1>
   <body>
-    <input type="number" id="firstNumInput" placeholder="number" />
-    <button class="equationType" id="additionBtn">+</button>
-    <button class="equationType" id="subtractBtn">-</button>
-    <button class="equationType" id="multiplyBtn">*</button>
-    <button class="equationType" id="divideBtn">/</button>
+    <form id="myForm">
+      <input type="number" id="firstNumInput" placeholder="number" />
+      <button
+        type="radio"
+        data-operation="add"
+        name="equation"
+        class="equationType"
+        id="additionBtn"
+        value="+"
+      >
+        +
+      </button>
+      <button
+        type="radio"
+        name="equation"
+        data-operation="subtract"
+        class="equationType"
+        id="subtractBtn"
+        value="-"
+      >
+        -
+      </button>
+      <button
+        type="radio"
+        name="equation"
+        class="equationType"
+        data-operation="multiply"
+        id="multiplyBtn"
+        value="*"
+      >
+        *
+      </button>
+      <button
+        type="radio"
+        name="equation"
+        class="equationType"
+        data-operation="divide"
+        id="divideBtn"
+        value="/"
+      >
+        /
+      </button>
 
-    <input type="number" id="secondNumInput" placeholder="number" />
-    <input class="submit" type="submit" id="submitBtn" value="=" />
-    <button>C</button>
+      <input type="number" id="secondNumInput" placeholder="number" />
+      <input class="submit" type="submit" id="submitBtn" value="=" />
+      <button id="clear">C</button>
+    </form>
+<div id='answer'> </div>
+    <h3>Previous Calculations<div id="list"> </div></h3>
   </body>
 </html>
