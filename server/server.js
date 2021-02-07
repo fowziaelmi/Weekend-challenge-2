@@ -9,3 +9,9 @@ app.use(express.urlencoded({ extended: true }));
 app.listen(PORT, () => {
   console.log('listening on port', PORT);
 });
+// get endpoint
+// I wont need get because server isn't sending anything to client
+// client is sending
+app.post('/calculations', (req, res) => {
+  res.sendStatus(200);
+});
